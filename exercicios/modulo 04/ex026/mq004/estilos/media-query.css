@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/* Typical Device Breakpoints 
+--------------------------------------
+Pequenas telas: até 600px;
+Celulares: de 600px até 768px;
+Tablet: 768px até 992px;
+Desktop: 992px até 1200px;
+Grandes telas: acima de 1200px */
+
+/* Todas as mídias */
+@media print {
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url('../imagens/back-print.jpg'); /* desnecessário, pois não imprime background-image */
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Essa impressao foi feita através do site Curso em Video.com';
+        text-decoration: overline;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#telefone { display: none; }
+    img#tablet { display: none; }
+    img#impressora { display: block; }
+    img#computador { display: none; }
+    img#televisao { display: none; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /* TABLET */
+    body {
+        background-image: url('../imagens/back-tablet.jpg');
+    }
+
+    img#telefone { display: none; }
+    img#tablet { display: block; }
+    img#impressora { display: none; }
+    img#computador { display: none; }
+    img#televisao { display: none; }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) { /* DESKTOP*/
+    body {
+        background-image: url('../imagens/back-pc.jpg');
+    }
+
+    img#telefone { display: none; }
+    img#tablet { display: none; }
+    img#impressora { display: none; }
+    img#computador { display: block; }
+    img#televisao { display: none; }
+}
+
+@media screen and (min-width: 1200px) { /* GRANDES TELAS */
+    body {
+        background-image: url('../imagens/back-tv.jpg');
+    }
+
+    img#telefone { display: none; }
+    img#tablet { display: none; }
+    img#impressora { display: none; }
+    img#computador { display: none; }
+    img#televisao { display: block; }
+}
