@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --fonte_titulo: 'Lilita One', sans-serif;
+    --fonte_principal: 'Charm', 'cursive';
+    --fonte_secundaria: Tahoma, Verdana, 'cursive';
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    font-family: var(--fonte_titulo);
+    font-weight: lighter;
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-size: 8vw;
+}
+
+header > p {
+    font-family: var(--fonte_secundaria);
+    padding-bottom: 50px;
+}
+
+header a, footer a {
+    font-variant: small-caps;
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+    color: lightgoldenrodyellow;
+}
+
+section {
+    padding: 6vh;
+    font-family: var(--fonte_principal);
+    padding: 15px;
+    font-size: 3.3vw;
+}
+
+section.imagem {
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+section.imagem > p {
+    background-color: rgba(0, 0, 0, 0.486);
+    color: white;
+    display: inline-block;
+    padding: 8px;
+    margin-left: 30px;
+    border-radius: 10px;
+    text-shadow: 1px 1px 1px black;;
+}
+
+section.normal > p {
+    margin: 15px;
+}
+
+section > p {
+    padding-bottom: 1em;
+    line-height: 1.7em;
+}
+
+section#fundo01 {
+    background-image: url('../imagens/fundo01.jpg');
+}
+
+section#fundo02 {
+    background-image: url('../imagens/fundo02.jpg');
+}
+
+section#fundo03 {
+    background-image: url('../imagens/fundo04.jpg');
+}
+
+footer {
+    font-family: var(--fonte_secundaria);
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 8px;
+}
